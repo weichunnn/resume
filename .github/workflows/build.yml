@@ -1,0 +1,42 @@
+name: overlead sync
+on:
+  schedule:
+    - cron: "0 0 */7 * *"
+  push:
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch the latest version from overleaf server
+        uses: subhamx/overleaf_sync_with_git@master
+        with:
+          OVERLEAF_PROJECT_ID: ${{ secrets.OVERLEAF_PROJECT_ID }}
+          OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
+
+      - name: Upload to Project Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: project
+          path: artifacts/
+
+      - name: Compile Resume
+        uses: xu-cheng/latex-action@v2
+        with:
+          working_directory: artifacts/
+          root_file: main.tex
+
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Commit Resume
+        run: |
+          mkdir src
+          cp -r artifacts/* src        
+          mv src/main.pdf Wei_Chun_Tan_Resume.pdf
+          git config user.name github-actions[bot]
+          git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git add .
+          git commit -m "sync with overleaf remote"
+          git push
