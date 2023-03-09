@@ -1,4 +1,4 @@
-name: overlead sync
+name: overleaf sync
 on:
   schedule:
     - cron: "0 0 */7 * *"
