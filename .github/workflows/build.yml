@@ -16,7 +16,7 @@ jobs:
           OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
 
       - name: Upload to Project Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v2
         with:
           name: project
           path: artifacts/
