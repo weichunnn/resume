@@ -16,7 +16,7 @@ jobs:
           OVERLEAF_COOKIE: ${{ secrets.OVERLEAF_COOKIE }}
 
       - name: Upload to Project Artifacts
-        uses: actions/upload-artifact@v2
+        uses: actions/upload-artifact@v3
         with:
           name: project
           path: artifacts/
@@ -28,10 +28,13 @@ jobs:
           root_file: main.tex
 
       - name: Checkout repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
+        with:
+          path: repo/
 
       - name: Commit Resume
         run: |
+          cd repo
           mkdir src
           cp -r artifacts/* src        
           mv src/main.pdf Wei_Chun_Tan_Resume.pdf
