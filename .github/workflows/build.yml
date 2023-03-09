@@ -32,14 +32,19 @@ jobs:
         with:
           path: repo/
 
+      - name: Create or clean directory
+        run: |
+          cd repo
+          if [ -d "overleaf_remote_src" ]; then rm -rf overleaf_remote_src/*; 
+          else mkdir overleaf; fi
+
       - name: Commit Resume
         run: |
           cd repo
-          mkdir src
-          cp -r artifacts/* src        
+          cp -r ../artifacts/* overleaf_remote_src        
           mv src/main.pdf Wei_Chun_Tan_Resume.pdf
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
           git add .
-          git commit -m "sync with overleaf remote"
-          git push
+          if [[ $(git diff HEAD --stat) == '' ]]; then (echo 'working tree is clean') 
+          else (git commit -m "sync with overleaf remote"  && git push) fi
