@@ -21,7 +21,7 @@ jobs:
           name: project
           path: artifacts/
 
-      - name: Compile Resume
+      - name: Compile resume
         uses: xu-cheng/latex-action@v2
         with:
           working_directory: artifacts/
@@ -36,9 +36,9 @@ jobs:
         run: |
           cd repo
           if [ -d "overleaf_remote_src" ]; then rm -rf overleaf_remote_src/*; 
-          else mkdir overleaf; fi
+          else mkdir overleaf_remote_src; fi
 
-      - name: Commit Resume
+      - name: Commit resume
         run: |
           cd repo
           cp -r ../artifacts/* overleaf_remote_src        
