@@ -1,5 +1,5 @@
 # Fdb version 4
-["pdflatex"] 1696494454 "main.tex" "main.pdf" "main" 1696494454 0
+["pdflatex"] 1696728216 "main.tex" "main.pdf" "main" 1696728217 0
   "/opt/texlive/texdir/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1136849721 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/opt/texlive/texdir/texmf-dist/fonts/map/fontname/texfonts.map" 1577235249 3524 cb3e574dea2d1052e39280babc910dc8 ""
   "/opt/texlive/texdir/texmf-dist/fonts/tfm/jknappen/ec/tcbx1000.tfm" 1136768653 1536 30fde759286ded71559881bfa2623939 ""
@@ -88,13 +88,13 @@
   "/opt/texlive/texdir/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1696122464 4681908 5e0ef1164c1e47ea0c04659a46b3416a ""
   "/opt/texlive/texdir/texmf-var/web2c/pdftex/pdflatex.fmt" 1696122598 8182891 85e7bb959a85025f30caad784d20505b ""
   "/opt/texlive/texdir/texmf.cnf" 1696122456 555 bd60ff59e4d560b42d96b004436f91d3 ""
-  "main.aux" 1696494454 952 26be53cecfba6a2c0214d076c5aa3e9b "pdflatex"
-  "main.out" 1696494454 264 a11f37d525fea76c44e53ee179c7a1b4 "pdflatex"
-  "main.tex" 1696494450 2906 c229e1db346122211e42e125dd127169 ""
-  "src/education.tex" 1696494450 443 0976b6564ece1267e06772803546b228 ""
-  "src/experience.tex" 1696494450 4138 32ae18d354363b8fa70a803e5bfe3cb6 ""
-  "src/heading.tex" 1696494450 361 837a1d6ba642623806b3e8cbe2daf0d0 ""
-  "src/project.tex" 1696494450 795 8daa56c6bf8567abaa7bf8055085c3e8 ""
+  "main.aux" 1696728217 952 26be53cecfba6a2c0214d076c5aa3e9b "pdflatex"
+  "main.out" 1696728217 264 a11f37d525fea76c44e53ee179c7a1b4 "pdflatex"
+  "main.tex" 1696728212 2906 c229e1db346122211e42e125dd127169 ""
+  "src/education.tex" 1696728212 443 0976b6564ece1267e06772803546b228 ""
+  "src/experience.tex" 1696728212 4138 32ae18d354363b8fa70a803e5bfe3cb6 ""
+  "src/heading.tex" 1696728212 361 837a1d6ba642623806b3e8cbe2daf0d0 ""
+  "src/project.tex" 1696728212 795 8daa56c6bf8567abaa7bf8055085c3e8 ""
   (generated)
   "main.aux"
   "main.log"
